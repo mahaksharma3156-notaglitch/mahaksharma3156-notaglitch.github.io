@@ -1,719 +1,1057 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="description"
-    content="Mahak Sharma — AI/ML researcher interested in Artificial Intelligence & Machine Learning, Human-AI Collaboration, and AI-Driven Cybersecurity.">
+    <title>Mahak Sharma | AI & Machine Learning Researcher</title>
 
-  <title>Mahak Sharma | AI & ML Researcher</title>
+    <meta
+        name="description"
+        content="Academic research portfolio of Mahak Sharma, focusing on Artificial Intelligence, Machine Learning, Computer Vision, Human-AI Collaboration, and AI-Driven Cybersecurity."
+    >
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Libre+Baskerville:wght@400;700&display=swap"
-    rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
-  <!-- =========================
-       NAVIGATION
-  ========================== -->
+<!-- ================= NAVIGATION ================= -->
 
-  <header class="site-header">
+<header class="navbar">
+    <div class="nav-container">
 
-    <div class="container nav-wrap">
+        <a href="#home" class="logo">
+            <span>M</span>S
+        </a>
 
-      <a href="#home" class="brand">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
 
-        <span class="brand-mark">MS</span>
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-        <span>Mahak Sharma</span>
-
-      </a>
-
-
-      <button class="menu-button" aria-label="Open navigation">
-
-        <span></span>
-        <span></span>
-        <span></span>
-
-      </button>
+    </div>
+</header>
 
 
-      <nav class="nav-links">
+<main>
 
-        <a href="#home">Home</a>
+<!-- ================= HERO ================= -->
 
-        <a href="#research">Research</a>
+<section id="home" class="hero section">
 
-        <a href="#publications">Publications</a>
+    <div class="hero-container">
 
-        <a href="#experience">Experience</a>
+        <div class="hero-content">
 
-        <a href="#about">About</a>
+            <p class="eyebrow">AI & MACHINE LEARNING RESEARCH</p>
 
-        <a href="#contact">Contact</a>
+            <h1>
+                Mahak<br>
+                <span>Sharma</span>
+            </h1>
 
-      </nav>
+            <p class="hero-description">
+                Exploring intelligent systems at the intersection of
+                artificial intelligence, human-AI collaboration, and
+                trustworthy computing.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#research" class="btn btn-primary">
+                    Explore Research
+                </a>
+
+                <a href="Mahak_Sharma_CV.pdf"
+                   class="btn btn-secondary"
+                   download>
+                    Download CV
+                </a>
+
+            </div>
+
+            <div class="hero-meta">
+
+                <div>
+                    <strong>Research</strong>
+                    <span>AI · ML · Security</span>
+                </div>
+
+                <div>
+                    <strong>Location</strong>
+                    <span>Palo Alto, CA</span>
+                </div>
+
+                <div>
+                    <strong>Focus</strong>
+                    <span>Intelligent Systems</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="portrait-frame">
+
+                <img
+                    src="profile.jpg"
+                    alt="Mahak Sharma"
+                >
+
+            </div>
+
+            <div class="visual-label">
+                <span>01</span>
+                Research Portfolio
+            </div>
+
+        </div>
 
     </div>
 
-  </header>
+</section>
 
 
+<!-- ================= RESEARCH ================= -->
 
-  <main>
+<section id="research" class="section research-section">
 
+    <div class="section-header">
 
-    <!-- =========================
-         HERO
-    ========================== -->
+        <div>
+            <p class="eyebrow">RESEARCH</p>
 
-    <section class="hero" id="home">
-
-      <div class="container hero-grid">
-
-
-        <div class="hero-copy">
-
-          <p class="eyebrow">
-            AI & ML Researcher
-          </p>
-
-
-          <h1>
-            Mahak Sharma
-          </h1>
-
-
-          <p class="hero-intro">
-
-            Exploring intelligent, human-centered AI systems with
-            interests spanning machine learning, human-AI collaboration,
-            and cybersecurity.
-
-          </p>
-
-
-          <!-- EXACT RESEARCH INTERESTS -->
-
-          <div class="research-line">
-
-            <span>
-              Artificial Intelligence & Machine Learning
-              <small>
-                (Computer Vision, Deep Learning, Continual Learning)
-              </small>
-            </span>
-
-            <span>
-              Human-AI Collaboration
-            </span>
-
-            <span>
-              AI-Driven Cybersecurity
-            </span>
-
-          </div>
-
-
-          <div class="hero-actions">
-
-            <a
-              href="#research"
-              class="button primary">
-
-              View Research
-
-            </a>
-
-
-            <a
-              href="cv.pdf"
-              class="button secondary"
-              target="_blank">
-
-              Download CV
-
-            </a>
-
-          </div>
-
+            <h2>
+                Questions that guide<br>
+                my work.
+            </h2>
         </div>
 
+        <p class="section-intro">
+            My research interests center on developing machine learning
+            systems that are reliable, adaptive, and meaningful in
+            real-world settings.
+        </p>
+
+    </div>
 
 
-        <!-- PHOTO -->
+    <div class="research-grid">
 
-        <div class="hero-photo-wrap">
+        <article class="research-card">
 
-          <div class="photo-accent"></div>
+            <div class="card-number">01</div>
 
-          <img
-            src="profile.jpg"
-            alt="Mahak Sharma"
-            class="hero-photo">
+            <h3>Artificial Intelligence & Machine Learning</h3>
 
+            <p>
+                Deep learning, computer vision, continual learning,
+                and intelligent systems for complex data-driven problems.
+            </p>
+
+            <div class="card-tags">
+                <span>Deep Learning</span>
+                <span>Continual Learning</span>
+                <span>Computer Vision</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card">
+
+            <div class="card-number">02</div>
+
+            <h3>Human-AI Collaboration</h3>
+
+            <p>
+                Studying how people interact with intelligent systems
+                and how multimodal signals can support more trustworthy
+                human-AI decision making.
+            </p>
+
+            <div class="card-tags">
+                <span>Multimodal AI</span>
+                <span>Trust</span>
+                <span>Human-AI Systems</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card">
+
+            <div class="card-number">03</div>
+
+            <h3>AI-Driven Cybersecurity</h3>
+
+            <p>
+                Exploring machine learning and AI governance approaches
+                for cybersecurity risk, access control, and adaptive
+                security environments.
+            </p>
+
+            <div class="card-tags">
+                <span>AI Security</span>
+                <span>Risk Management</span>
+                <span>Access Control</span>
+            </div>
+
+        </article>
+
+
+        <article class="research-card">
+
+            <div class="card-number">04</div>
+
+            <h3>Data & Intelligent Systems</h3>
+
+            <p>
+                Designing scalable data and machine learning pipelines
+                for recommendation, ranking, analytics, and
+                real-world deployment.
+            </p>
+
+            <div class="card-tags">
+                <span>Ranking</span>
+                <span>NLP</span>
+                <span>ML Engineering</span>
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div class="research-focus">
+
+        <div class="focus-label">
+            RESEARCH INTERESTS
         </div>
 
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         RESEARCH
-    ========================== -->
-
-    <section
-      class="section soft-section"
-      id="research">
-
-      <div class="container">
-
-
-        <div class="section-heading centered">
-
-          <p class="eyebrow">
-            Research
-          </p>
-
-          <h2>
-            Research Interests
-          </h2>
-
-          <p>
-
-            My research interests are centered on
+        <p>
             Artificial Intelligence & Machine Learning
-            (Computer Vision, Deep Learning, Continual Learning),
-            Human-AI Collaboration, and AI-Driven Cybersecurity.
+            (Computer Vision, Deep Learning, Continual Learning)
+            <span>|</span>
+            Human-AI Collaboration
+            <span>|</span>
+            AI-Driven Cybersecurity
+        </p>
 
-          </p>
+    </div>
 
-        </div>
+</section>
 
 
+<!-- ================= RESEARCH APPROACH ================= -->
 
-        <div class="research-grid">
+<section class="section approach-section">
 
-
-          <article class="research-card">
-
-            <div class="card-number">
-              01
-            </div>
-
-            <h3>
-              Artificial Intelligence & Machine Learning
-            </h3>
-
-            <p>
-
-              Computer Vision, Deep Learning, and
-              Continual Learning.
-
-            </p>
-
-          </article>
-
-
-
-          <article class="research-card">
-
-            <div class="card-number">
-              02
-            </div>
-
-            <h3>
-              Human-AI Collaboration
-            </h3>
-
-            <p>
-
-              Studying trust, interaction, and collaboration
-              between humans and intelligent systems.
-
-            </p>
-
-          </article>
-
-
-
-          <article class="research-card">
-
-            <div class="card-number">
-              03
-            </div>
-
-            <h3>
-              AI-Driven Cybersecurity
-            </h3>
-
-            <p>
-
-              Exploring AI-supported approaches to
-              cybersecurity risk management and governance.
-
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         PUBLICATIONS
-    ========================== -->
-
-    <section
-      class="section"
-      id="publications">
-
-      <div class="container">
-
-
-        <div class="section-heading">
-
-          <p class="eyebrow">
-            Selected Work
-          </p>
-
-          <h2>
-            Publications & Manuscripts
-          </h2>
-
-        </div>
-
-
-
-        <div class="publication-list">
-
-
-          <!-- PAPER 1 -->
-
-          <article class="publication-item">
-
-            <div class="publication-meta">
-
-              <span class="status">
-                Accepted · 2026
-              </span>
-
-              <span>
-                AI & Society
-              </span>
-
-            </div>
-
-
-            <div>
-
-              <h3>
-
-                Detecting Trust Miscalibration in Human-AI
-                Collaboration Using Multimodal Emotion Cues:
-                A Machine Learning Framework
-
-              </h3>
-
-              <p class="author">
-                Mahak Sharma
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- PAPER 2 -->
-
-          <article class="publication-item">
-
-            <div class="publication-meta">
-
-              <span class="status">
-                Accepted · 2026
-              </span>
-
-              <span>
-                Computers & Security
-              </span>
-
-            </div>
-
-
-            <div>
-
-              <h3>
-
-                An AI-Augmented Governance Architecture
-                for Dynamic Cybersecurity Risk Management
-                in SMEs: Design, Implementation, and
-                Longitudinal Assessment
-
-              </h3>
-
-              <p class="author">
-                Mahak Sharma
-              </p>
-
-            </div>
-
-          </article>
-
-
-
-          <!-- PAPER 3 -->
-
-          <article class="publication-item">
-
-            <div class="publication-meta">
-
-              <span class="status neutral">
-                In Preparation
-              </span>
-
-              <span>
-                Manuscript
-              </span>
-
-            </div>
-
-
-            <div>
-
-              <h3>
-
-                Replayless Structural Consolidation:
-                Continual Learning via Dynamic Network Motifs
-
-              </h3>
-
-              <p class="author">
-                Mahak Sharma
-              </p>
-
-            </div>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         EXPERIENCE
-    ========================== -->
-
-    <section
-      class="section soft-section"
-      id="experience">
-
-      <div class="container">
-
-
-        <div class="section-heading centered">
-
-          <p class="eyebrow">
-            Background
-          </p>
-
-          <h2>
-            Experience
-          </h2>
-
-        </div>
-
-
-
-        <div class="timeline">
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <p class="timeline-date">
-              July 2025 – Present
-            </p>
-
-            <h3>
-              Machine Learning Engineer
-            </h3>
-
-            <p class="organization">
-              Amazon (via Forman Tech)
-            </p>
-
-          </article>
-
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <p class="timeline-date">
-              October 2024 – July 2025
-            </p>
-
-            <h3>
-              Program Manager
-            </h3>
-
-            <p class="organization">
-              Community Dreams Foundation
-            </p>
-
-          </article>
-
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <p class="timeline-date">
-              July 2022 – June 2023
-            </p>
-
-            <h3>
-              Systems Engineer
-            </h3>
-
-            <p class="organization">
-              Tata Consultancy Services
-            </p>
-
-          </article>
-
-
-
-          <article class="timeline-item">
-
-            <div class="timeline-dot"></div>
-
-            <p class="timeline-date">
-              July 2020 – April 2022
-            </p>
-
-            <h3>
-              Research Assistant
-            </h3>
-
-            <p class="organization">
-              Medi-Caps University
-            </p>
-
-          </article>
-
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         ABOUT + EDUCATION
-    ========================== -->
-
-    <section
-      class="section"
-      id="about">
-
-      <div class="container info-grid">
-
-
-        <div class="info-panel">
-
-          <p class="eyebrow">
-            About
-          </p>
-
-          <h2>
-            About Me
-          </h2>
-
-          <p>
-
-            I am an AI/ML researcher and Machine Learning Engineer
-            interested in developing and studying intelligent systems
-            that address real-world problems.
-
-          </p>
-
-          <p>
-
-            My background combines research experience with industry
-            experience in machine learning, data, cybersecurity,
-            and intelligent systems.
-
-          </p>
-
-        </div>
-
-
-
-        <div class="info-panel">
-
-          <p class="eyebrow">
-            Education
-          </p>
-
-          <h2>
-            Academic Background
-          </h2>
-
-
-          <div class="education-item">
-
-            <h3>
-              MS in Management Information Systems
-            </h3>
-
-            <p>
-              SUNY University at Buffalo · 2023–2024
-            </p>
-
-          </div>
-
-
-          <div class="education-item">
-
-            <h3>
-              Master of Computer Applications
-            </h3>
-
-            <p>
-              Medi-Caps University · 2019–2022
-            </p>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section
-      class="contact-section"
-      id="contact">
-
-      <div class="container contact-inner">
-
+    <div class="approach-layout">
 
         <div>
 
-          <p class="eyebrow light">
-            Contact
-          </p>
+            <p class="eyebrow">APPROACH</p>
 
-          <h2>
-            Let’s connect.
-          </h2>
-
-          <p>
-
-            I welcome conversations around research,
-            doctoral study, and collaborative work in
-            AI and intelligent systems.
-
-          </p>
+            <h2>
+                Rigorous methods,<br>
+                practical questions.
+            </h2>
 
         </div>
 
 
+        <div class="approach-content">
 
-        <div class="contact-links">
+            <p>
+                I approach research through a combination of
+                experimental design, systematic analysis, and
+                reproducible implementation. My work emphasizes
+                understanding not only whether a model performs,
+                but also why it performs and where it may fail.
+            </p>
 
-          <a href="mailto:mahaksharma8899@gmail.com">
+            <div class="method-grid">
 
-            mahaksharma8899@gmail.com
+                <span>Experimental Design</span>
+                <span>Ablation Studies</span>
+                <span>Model Evaluation</span>
+                <span>Feature Analysis</span>
+                <span>Error Analysis</span>
+                <span>Benchmarking</span>
+                <span>Reproducible Research</span>
+                <span>Framework Development</span>
 
-          </a>
-
-
-          <a
-            href="https://www.linkedin.com/"
-            target="_blank">
-
-            LinkedIn
-
-          </a>
-
-
-          <a
-            href="cv.pdf"
-            target="_blank">
-
-            Curriculum Vitae
-
-          </a>
+            </div>
 
         </div>
-
-      </div>
-
-    </section>
-
-  </main>
-
-
-
-  <footer>
-
-    <div class="container footer-inner">
-
-      <span>
-        © 2026 Mahak Sharma
-      </span>
-
-      <span>
-        AI & ML Researcher
-      </span>
 
     </div>
 
-  </footer>
+</section>
 
 
+<!-- ================= PUBLICATIONS ================= -->
 
-  <script src="script.js"></script>
+<section id="publications" class="section publications-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">PUBLICATIONS</p>
+
+            <h2>
+                Selected research.
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            My current work explores trustworthy human-AI interaction,
+            cybersecurity governance, and adaptive learning systems.
+        </p>
+
+    </div>
+
+
+    <div class="publication-list">
+
+        <article class="publication">
+
+            <div class="publication-year">
+                2026
+            </div>
+
+            <div class="publication-main">
+
+                <span class="publication-status">
+                    ACCEPTED · AI & SOCIETY
+                </span>
+
+                <h3>
+                    Detecting Trust Miscalibration in Human-AI
+                    Collaboration Using Multimodal Emotion Cues:
+                    A Machine Learning Framework
+                </h3>
+
+                <p>
+                    Sharma, M.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication">
+
+            <div class="publication-year">
+                2026
+            </div>
+
+            <div class="publication-main">
+
+                <span class="publication-status">
+                    ACCEPTED · COMPUTERS & SECURITY
+                </span>
+
+                <h3>
+                    An AI-Augmented Governance Architecture for
+                    Dynamic Cybersecurity Risk Management in SMEs:
+                    Design, Implementation, and Longitudinal Assessment
+                </h3>
+
+                <p>
+                    Sharma, M.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication">
+
+            <div class="publication-year">
+                2026
+            </div>
+
+            <div class="publication-main">
+
+                <span class="publication-status">
+                    MANUSCRIPT IN PREPARATION
+                </span>
+
+                <h3>
+                    Replayless Structural Consolidation:
+                    Continual Learning via Dynamic Network Motifs
+                </h3>
+
+                <p>
+                    Sharma, M.
+                </p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience" class="section experience-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">EXPERIENCE</p>
+
+            <h2>
+                Research meets<br>
+                real-world systems.
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            Alongside academic research, I have worked on machine
+            learning, data, cybersecurity, and technology programs
+            across research and industry environments.
+        </p>
+
+    </div>
+
+
+    <div class="experience-list">
+
+
+        <!-- AMAZON -->
+
+        <article class="experience-item">
+
+            <div class="experience-logo">
+                <img src="amazon.png" alt="Amazon logo">
+            </div>
+
+            <div class="experience-details">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Machine Learning Engineer</h3>
+                        <p>Amazon · via Forman Tech · USA</p>
+                    </div>
+
+                    <span>Jul 2025 — Present</span>
+
+                </div>
+
+                <ul>
+                    <li>
+                        Developed recommendation and ranking systems
+                        using customer behavior, purchase history, and
+                        product metadata.
+                    </li>
+
+                    <li>
+                        Built NLP pipelines for product search and query
+                        understanding, including classification,
+                        semantic search, and ranking.
+                    </li>
+
+                    <li>
+                        Developed scalable Python, SQL, and PySpark
+                        pipelines with AWS-based model training,
+                        monitoring, and drift detection.
+                    </li>
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <!-- COMMUNITY DREAMS -->
+
+        <article class="experience-item">
+
+            <div class="experience-logo">
+                <img
+                    src="community-dreams.png"
+                    alt="Community Dreams Foundation logo"
+                >
+            </div>
+
+            <div class="experience-details">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Program Manager</h3>
+                        <p>Community Dreams Foundation · USA</p>
+                    </div>
+
+                    <span>Oct 2024 — Jul 2025</span>
+
+                </div>
+
+                <ul>
+                    <li>
+                        Managed technology programs from requirements
+                        through implementation across AI/ML initiatives.
+                    </li>
+
+                    <li>
+                        Coordinated engineers, data scientists, and
+                        stakeholders while defining KPIs and
+                        data-driven evaluation processes.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <!-- TCS -->
+
+        <article class="experience-item">
+
+            <div class="experience-logo">
+                <img src="tcs.png" alt="Tata Consultancy Services logo">
+            </div>
+
+            <div class="experience-details">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Systems Engineer</h3>
+                        <p>Tata Consultancy Services · India</p>
+                    </div>
+
+                    <span>Jul 2022 — Jun 2023</span>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Developed machine learning automation for
+                        internal data validation workflows.
+                    </li>
+
+                    <li>
+                        Applied customer segmentation techniques to
+                        analyze client behavior and service offerings.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <!-- DELOITTE -->
+
+        <article class="experience-item">
+
+            <div class="experience-logo">
+                <img src="deloitte.png" alt="Deloitte logo">
+            </div>
+
+            <div class="experience-details">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Senior Analyst</h3>
+                        <p>Deloitte USI · India</p>
+                    </div>
+
+                    <span>Mar 2020 — Jun 2022</span>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Applied machine learning approaches to demand
+                        forecasting and business analytics.
+                    </li>
+
+                    <li>
+                        Developed unsupervised anomaly detection
+                        approaches for financial transaction analysis.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <!-- RESEARCH -->
+
+        <article class="experience-item research-experience">
+
+            <div class="experience-marker">
+                R
+            </div>
+
+            <div class="experience-details">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Research Assistant · Computer Vision & Deep Learning</h3>
+                        <p>Medi-Caps University · India</p>
+                    </div>
+
+                    <span>Jul 2021 — Apr 2022</span>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Developed CNN-BiLSTM and attention-based pipelines
+                        for posed and spontaneous facial expression
+                        classification.
+                    </li>
+
+                    <li>
+                        Processed and labeled 5,000+ video clips and
+                        extracted facial Action Units, optical flow,
+                        and head pose features using OpenFace.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+
+        <article class="experience-item research-experience">
+
+            <div class="experience-marker">
+                R
+            </div>
+
+            <div class="experience-details">
+
+                <div class="experience-top">
+
+                    <div>
+                        <h3>Research Assistant · Cybersecurity & Cloud Access Control</h3>
+                        <p>Medi-Caps University · India</p>
+                    </div>
+
+                    <span>Jul 2020 — Jun 2021</span>
+
+                </div>
+
+                <ul>
+
+                    <li>
+                        Implemented MFA integrated with RBAC and ABAC
+                        across AWS and Azure environments.
+                    </li>
+
+                    <li>
+                        Evaluated authentication systems using latency,
+                        false acceptance, and false rejection metrics.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section about-section">
+
+    <div class="about-grid">
+
+        <div>
+
+            <p class="eyebrow">ABOUT</p>
+
+            <h2>
+                Building systems<br>
+                worth trusting.
+            </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="large-text">
+                My work sits at the intersection of machine learning,
+                intelligent systems, and responsible technology.
+            </p>
+
+            <p>
+                I am interested in understanding how AI systems can
+                become more adaptive, interpretable, and reliable when
+                deployed in complex environments involving people,
+                data, and changing conditions.
+            </p>
+
+            <p>
+                My academic background spans computer applications,
+                information systems, and applied machine learning,
+                complemented by research and industry experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="section education-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">EDUCATION</p>
+
+            <h2>
+                Academic foundation.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="education-grid">
+
+        <article class="education-card">
+
+            <span class="education-year">
+                2023 — 2024
+            </span>
+
+            <h3>
+                MS in Management Information Systems
+            </h3>
+
+            <p class="institution">
+                University at Buffalo, SUNY · USA
+            </p>
+
+            <p>
+                IT & Cloud Infrastructure Management · Distributed
+                Computing & Big Data · Database Management Systems ·
+                Predictive Analytics · Data Warehousing
+            </p>
+
+        </article>
+
+
+        <article class="education-card">
+
+            <span class="education-year">
+                2019 — 2022
+            </span>
+
+            <h3>
+                Master of Computer Applications
+            </h3>
+
+            <p class="institution">
+                Medi-Caps University · India
+            </p>
+
+            <p>
+                Advanced Programming · Data Structures & Algorithms ·
+                IoT · Data Warehousing & Mining · Computer Networks ·
+                Statistical & Numerical Methods
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section skills-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">SKILLS</p>
+
+            <h2>
+                Areas of practice.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-group">
+            <h3>AI & Machine Learning</h3>
+            <p>
+                Deep Learning · Neural Networks · Continual Learning ·
+                Recommender Systems · Ranking · Anomaly Detection
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Computer Vision</h3>
+            <p>
+                Multimodal AI · Facial Expression Recognition ·
+                Video Analysis · CNNs · CNN-BiLSTM · OpenFace
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Natural Language Processing</h3>
+            <p>
+                Query Classification · Semantic Search ·
+                Query Understanding · Text Classification · Ranking
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Cybersecurity & AI Security</h3>
+            <p>
+                Cloud Security · MFA · RBAC · ABAC ·
+                Cyber Risk Management · AI Governance
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>ML Engineering & MLOps</h3>
+            <p>
+                Python · SQL · PySpark · TensorFlow · Scikit-learn ·
+                AWS SageMaker · Model Monitoring · Drift Detection
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Research Methods</h3>
+            <p>
+                Experimental Design · Ablation Studies ·
+                Literature Review · Benchmarking · Error Analysis ·
+                Reproducible Research
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= RECOGNITION ================= -->
+
+<section class="section recognition-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">RECOGNITION</p>
+
+            <h2>
+                A few milestones.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="recognition-grid">
+
+        <div class="recognition-card">
+
+            <span>01</span>
+
+            <h3>
+                Best Research Presentation Award
+            </h3>
+
+            <p>
+                Oral Category · Medi-Caps University
+            </p>
+
+        </div>
+
+
+        <div class="recognition-card">
+
+            <span>02</span>
+
+            <h3>
+                TCS GEMS Award
+            </h3>
+
+            <p>
+                Employee Recognition · Tata Consultancy Services
+            </p>
+
+        </div>
+
+
+        <div class="recognition-card">
+
+            <span>03</span>
+
+            <h3>
+                AWS Certified Machine Learning
+            </h3>
+
+            <p>
+                AWS Certified Machine Learning – Specialty
+            </p>
+
+        </div>
+
+
+        <div class="recognition-card">
+
+            <span>04</span>
+
+            <h3>
+                CompTIA Security+
+            </h3>
+
+            <p>
+                Cybersecurity certification
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="contact-container">
+
+        <div>
+
+            <p class="eyebrow">CONTACT</p>
+
+            <h2>
+                Interested in<br>
+                research collaboration?
+            </h2>
+
+        </div>
+
+
+        <div class="contact-content">
+
+            <p>
+                I welcome conversations about research,
+                doctoral opportunities, collaboration, and
+                intelligent systems.
+            </p>
+
+            <a
+                href="mailto:mahaksharma.academic@gmail.com"
+                class="contact-email"
+            >
+                mahaksharma.academic@gmail.com
+            </a>
+
+            <div class="contact-links">
+
+                <a
+                    href="https://www.linkedin.com/in/8mahakms/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
+
+                <a
+                    href="Mahak_Sharma_CV.pdf"
+                    download
+                >
+                    Curriculum Vitae ↓
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div>
+
+        <strong>Mahak Sharma</strong>
+
+        <span>
+            AI & Machine Learning Research
+        </span>
+
+    </div>
+
+    <p>
+        © 2026 Mahak Sharma
+    </p>
+
+</footer>
+
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
