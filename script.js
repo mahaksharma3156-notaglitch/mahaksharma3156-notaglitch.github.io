@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
     /* ================= MOBILE MENU ================= */
 
@@ -7,18 +7,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (menuToggle && navLinks) {
 
-        menuToggle.addEventListener("click", () => {
+        menuToggle.addEventListener("click", function () {
             navLinks.classList.toggle("open");
         });
 
-        navLinks.querySelectorAll("a").forEach(link => {
+        const links = navLinks.querySelectorAll("a");
 
-            link.addEventListener("click", () => {
+        links.forEach(function (link) {
+
+            link.addEventListener("click", function () {
                 navLinks.classList.remove("open");
             });
 
         });
-
     }
 
 
@@ -31,74 +32,62 @@ document.addEventListener("DOMContentLoaded", () => {
 
         let currentSection = "";
 
-        sections.forEach(section => {
+        sections.forEach(function (section) {
 
-            const sectionTop =
-                section.offsetTop - 140;
+            const sectionTop = section.offsetTop - 160;
 
             if (window.scrollY >= sectionTop) {
-                currentSection =
-                    section.getAttribute("id");
+                currentSection = section.getAttribute("id");
             }
 
         });
 
-        navItems.forEach(link => {
+        navItems.forEach(function (link) {
 
             link.classList.remove("active");
 
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
+            const href = link.getAttribute("href");
+
+            if (href === "#" + currentSection) {
                 link.classList.add("active");
             }
 
         });
-
     }
 
-    window.addEventListener(
-        "scroll",
-        updateActiveNav
-    );
+    window.addEventListener("scroll", updateActiveNav);
 
     updateActiveNav();
 
 
     /* ================= SCROLL REVEAL ================= */
 
-    const revealElements =
-        document.querySelectorAll(
-            ".research-card, " +
-            ".publication, " +
-            ".experience-card, " +
-            ".education-card, " +
-            ".skill-group, " +
-            ".recognition-card"
-        );
+    const revealElements = document.querySelectorAll(
+        ".research-card, " +
+        ".publication, " +
+        ".experience-card, " +
+        ".education-card, " +
+        ".skill-group, " +
+        ".recognition-card"
+    );
 
-    revealElements.forEach(element => {
+    revealElements.forEach(function (element) {
         element.classList.add("reveal");
     });
 
 
-    const observer =
-        new IntersectionObserver(
-            entries => {
+    if ("IntersectionObserver" in window) {
 
-                entries.forEach(entry => {
+        const observer = new IntersectionObserver(
+            function (entries) {
+
+                entries.forEach(function (entry) {
 
                     if (entry.isIntersecting) {
 
-                        entry.target.classList.add(
-                            "visible"
-                        );
+                        entry.target.classList.add("visible");
 
-                        observer.unobserve(
-                            entry.target
-                        );
-
+                        observer.unobserve(entry.target);
                     }
 
                 });
@@ -110,14 +99,22 @@ document.addEventListener("DOMContentLoaded", () => {
         );
 
 
-    revealElements.forEach(element => {
-        observer.observe(element);
-    });
+        revealElements.forEach(function (element) {
+            observer.observe(element);
+        });
+
+    } else {
+
+        revealElements.forEach(function (element) {
+            element.classList.add("visible");
+        });
+
+    }
 
 
     /* ================= RESIZE ================= */
 
-    window.addEventListener("resize", () => {
+    window.addEventListener("resize", function () {
 
         if (
             window.innerWidth > 700 &&
