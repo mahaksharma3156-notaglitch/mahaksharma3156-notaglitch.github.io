@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelector(".nav-links");
 
 
-    /* MOBILE MENU */
+    /* MOBILE NAVIGATION */
 
     if (menuToggle && navLinks) {
 
@@ -30,14 +30,20 @@ document.addEventListener("DOMContentLoaded", function () {
     const navItems = document.querySelectorAll(".nav-links a");
 
 
-    function updateNav() {
+    function updateNavigation() {
 
-        let current = "";
+        let currentSection = "";
 
         sections.forEach(function (section) {
 
-            if (window.scrollY >= section.offsetTop - 150) {
-                current = section.id;
+            const sectionTop = section.offsetTop - 180;
+            const sectionBottom = sectionTop + section.offsetHeight;
+
+            if (
+                window.scrollY >= sectionTop &&
+                window.scrollY < sectionBottom
+            ) {
+                currentSection = section.id;
             }
 
         });
@@ -45,9 +51,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         navItems.forEach(function (link) {
 
+            const target = link.getAttribute("href");
+
             link.classList.toggle(
                 "active",
-                link.getAttribute("href") === "#" + current
+                target === "#" + currentSection
             );
 
         });
@@ -55,8 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    window.addEventListener("scroll", updateNav);
+    window.addEventListener(
+        "scroll",
+        updateNavigation,
+        { passive: true }
+    );
 
-    updateNav();
+    updateNavigation();
 
 });
