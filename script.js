@@ -1,7 +1,3 @@
-/* =========================================================
-   MAHAK SHARMA — PORTFOLIO INTERACTIONS
-   ========================================================= */
-
 document.addEventListener("DOMContentLoaded", () => {
 
     /* ================= MOBILE MENU ================= */
@@ -22,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
         });
+
     }
 
 
@@ -30,16 +27,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll("section[id]");
     const navItems = document.querySelectorAll(".nav-links a");
 
-    const updateActiveNav = () => {
+    function updateActiveNav() {
 
         let currentSection = "";
 
         sections.forEach(section => {
 
-            const sectionTop = section.offsetTop - 130;
+            const sectionTop =
+                section.offsetTop - 140;
 
             if (window.scrollY >= sectionTop) {
-                currentSection = section.getAttribute("id");
+                currentSection =
+                    section.getAttribute("id");
             }
 
         });
@@ -56,49 +55,59 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
         });
-    };
 
-    window.addEventListener("scroll", updateActiveNav);
+    }
+
+    window.addEventListener(
+        "scroll",
+        updateActiveNav
+    );
 
     updateActiveNav();
 
 
     /* ================= SCROLL REVEAL ================= */
 
-    const revealElements = document.querySelectorAll(
-        ".research-card, " +
-        ".publication, " +
-        ".experience-item, " +
-        ".education-card, " +
-        ".skill-group, " +
-        ".recognition-card"
-    );
+    const revealElements =
+        document.querySelectorAll(
+            ".research-card, " +
+            ".publication, " +
+            ".experience-card, " +
+            ".education-card, " +
+            ".skill-group, " +
+            ".recognition-card"
+        );
 
     revealElements.forEach(element => {
         element.classList.add("reveal");
     });
 
 
-    const observer = new IntersectionObserver(
-        entries => {
+    const observer =
+        new IntersectionObserver(
+            entries => {
 
-            entries.forEach(entry => {
+                entries.forEach(entry => {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    entry.target.classList.add("visible");
+                        entry.target.classList.add(
+                            "visible"
+                        );
 
-                    observer.unobserve(entry.target);
+                        observer.unobserve(
+                            entry.target
+                        );
 
-                }
+                    }
 
-            });
+                });
 
-        },
-        {
-            threshold: 0.12
-        }
-    );
+            },
+            {
+                threshold: 0.12
+            }
+        );
 
 
     revealElements.forEach(element => {
@@ -106,7 +115,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    /* ================= CLOSE MENU ON RESIZE ================= */
+    /* ================= RESIZE ================= */
 
     window.addEventListener("resize", () => {
 
