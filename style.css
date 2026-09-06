@@ -1,6 +1,5 @@
 :root {
     --navy: #10233f;
-    --navy-dark: #0b1a30;
     --blue: #315f91;
     --blue-light: #eaf1f8;
 
@@ -45,8 +44,8 @@ a {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 
@@ -59,11 +58,13 @@ img {
 }
 
 .eyebrow {
+    margin-bottom: 17px;
+
     color: var(--blue);
-    font-size: 0.7rem;
+
+    font-size: 0.69rem;
     font-weight: 700;
     letter-spacing: 0.17em;
-    margin-bottom: 17px;
 }
 
 h1,
@@ -83,7 +84,7 @@ h2 {
 }
 
 
-/* ================= NAV ================= */
+/* ================= NAVIGATION ================= */
 
 .navbar {
     position: sticky;
@@ -143,6 +144,7 @@ h2 {
     position: relative;
 
     color: #596577;
+
     font-size: 0.79rem;
     font-weight: 500;
 
@@ -257,6 +259,7 @@ h2 {
 .btn-secondary {
     background: white;
     color: var(--navy);
+
     border: 1px solid var(--border-dark);
 }
 
@@ -387,9 +390,9 @@ h2 {
 .research-card:hover {
     transform: translateY(-4px);
 
-    box-shadow: 0 15px 35px rgba(16, 35, 63, 0.06);
-
     border-color: var(--border-dark);
+
+    box-shadow: 0 15px 35px rgba(16, 35, 63, 0.06);
 }
 
 .card-number {
@@ -431,7 +434,6 @@ h2 {
     padding: 4px 8px;
 
     background: #f3f5f7;
-
     border-radius: 3px;
 
     color: #586579;
@@ -471,8 +473,8 @@ h2 {
 }
 
 .research-focus p span {
-    color: #a5afbb;
     margin: 0 7px;
+    color: #a5afbb;
 }
 
 
@@ -509,7 +511,6 @@ h2 {
 
 .approach-content > p {
     color: #cbd5e1;
-
     font-size: 0.87rem;
 }
 
@@ -590,11 +591,29 @@ h2 {
 
 
 /* =========================================================
-   EXPERIENCE — CLEAN CARDS, NO TIMELINE
+   EXPERIENCE
+   Clean cards — no timeline, no descriptions
    ========================================================= */
 
 .experience-section {
     border-top: 1px solid var(--border);
+}
+
+.experience-intro {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+
+    gap: 65px;
+    align-items: end;
+
+    margin-bottom: 42px;
+}
+
+.experience-intro > p {
+    max-width: 450px;
+
+    color: var(--muted);
+    font-size: 0.88rem;
 }
 
 .experience-grid {
@@ -606,11 +625,13 @@ h2 {
 }
 
 .experience-card {
-    display: grid;
+    min-height: 125px;
 
-    grid-template-columns: 54px 1fr;
+    display: grid;
+    grid-template-columns: 62px 1fr;
 
     gap: 20px;
+    align-items: center;
 
     padding: 25px;
 
@@ -618,7 +639,10 @@ h2 {
 
     border: 1px solid var(--border);
 
-    transition: 0.25s ease;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
 .experience-card:hover {
@@ -626,15 +650,15 @@ h2 {
 
     border-color: var(--border-dark);
 
-    box-shadow: 0 12px 28px rgba(16, 35, 63, 0.05);
+    box-shadow: 0 14px 30px rgba(16, 35, 63, 0.06);
 }
 
 
-/* COMPANY LOGOS */
+/* LOGO */
 
 .experience-logo {
-    width: 54px;
-    height: 54px;
+    width: 62px;
+    height: 62px;
 
     display: flex;
     align-items: center;
@@ -643,8 +667,7 @@ h2 {
     background: white;
 
     border: 1px solid var(--border);
-
-    border-radius: 6px;
+    border-radius: 7px;
 
     overflow: hidden;
 }
@@ -652,108 +675,102 @@ h2 {
 .experience-logo img {
     display: block;
 
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
 
     object-fit: contain;
 }
 
-/* Amazon */
+
+/* AMAZON */
 
 .experience-logo img[src="amazon.png"] {
-    width: 45px;
+    width: 50px;
     height: auto;
 }
 
-/* Community Dreams */
+
+/* COMMUNITY DREAMS */
 
 .experience-logo img[src="community-dreams.png"] {
-    width: 42px;
-    height: 42px;
+    width: 47px;
+    height: 47px;
 }
+
 
 /* TCS */
 
 .experience-logo img[src="tcs.png"],
 .experience-logo img.tcs-logo {
-    width: 48px !important;
-    height: 48px !important;
+    width: 53px !important;
+    height: 53px !important;
 
     object-fit: contain;
 }
 
-/* Deloitte */
+
+/* DELOITTE */
 
 .experience-logo img[src="deloitte.png"] {
-    width: 46px;
+    width: 51px;
     height: auto;
 }
 
 
-/* EXPERIENCE TEXT */
+/* EXPERIENCE INFORMATION */
 
-.experience-heading {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
+.experience-info {
+    min-width: 0;
 }
 
-.experience-heading h3 {
+.experience-role {
     color: var(--navy);
 
-    font-size: 0.93rem;
+    font-family: var(--serif);
+
+    font-size: 1.18rem;
+    line-height: 1.25;
 }
 
-.experience-heading p {
-    margin-top: 3px;
+.experience-company {
+    margin-top: 7px;
 
     color: var(--blue);
 
-    font-size: 0.7rem;
+    font-size: 0.72rem;
+    font-weight: 600;
 }
 
-.experience-heading > span {
-    white-space: nowrap;
+.experience-date {
+    margin-top: 6px;
 
-    color: #8490a0;
+    color: #8994a3;
 
-    font-size: 0.65rem;
-}
-
-.experience-summary {
-    margin-top: 12px;
-
-    color: var(--muted);
-
-    font-size: 0.76rem;
-
-    line-height: 1.55;
+    font-size: 0.66rem;
 }
 
 
 /* RESEARCH EXPERIENCE */
 
-.research-card-experience {
-    background: #f5f7fa;
+.research-experience {
+    background: #f4f7fa;
 }
 
 .research-badge {
-    width: 54px;
-    height: 54px;
+    width: 62px;
+    height: 62px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    border-radius: 6px;
-
     background: var(--navy);
     color: white;
 
+    border-radius: 7px;
+
     font-family: var(--serif);
-    font-size: 1.15rem;
+    font-size: 1.25rem;
 }
 
 
@@ -779,7 +796,6 @@ h2 {
     margin-bottom: 18px;
 
     color: var(--muted);
-
     font-size: 0.87rem;
 }
 
@@ -889,9 +905,7 @@ h2 {
 }
 
 
-/* =========================================================
-   A FEW MILESTONES
-   ========================================================= */
+/* ================= MILESTONES ================= */
 
 .recognition-section {
     border-top: 1px solid var(--border);
@@ -1047,7 +1061,6 @@ h2 {
 
 .reveal {
     opacity: 0;
-
     transform: translateY(14px);
 
     transition:
@@ -1057,7 +1070,6 @@ h2 {
 
 .reveal.visible {
     opacity: 1;
-
     transform: translateY(0);
 }
 
@@ -1070,9 +1082,9 @@ h2 {
     .section-header,
     .approach-layout,
     .about-grid,
-    .contact-container {
+    .contact-container,
+    .experience-intro {
         grid-template-columns: 1fr;
-
         gap: 40px;
     }
 
@@ -1120,7 +1132,6 @@ h2 {
 
     .section {
         width: calc(100% - 32px);
-
         padding: 68px 0;
     }
 
@@ -1168,13 +1179,11 @@ h2 {
 
     .hero-meta {
         flex-direction: column;
-
         gap: 15px;
     }
 
     .hero-buttons {
         flex-direction: column;
-
         align-items: stretch;
     }
 
@@ -1191,7 +1200,6 @@ h2 {
 
     .research-focus {
         grid-template-columns: 1fr;
-
         gap: 10px;
     }
 
@@ -1201,7 +1209,6 @@ h2 {
 
     .publication {
         grid-template-columns: 1fr;
-
         gap: 8px;
     }
 
@@ -1225,30 +1232,18 @@ h2 {
     .experience-logo img[src="tcs.png"],
     .experience-logo img.tcs-logo,
     .experience-logo img[src="deloitte.png"] {
-        width: 38px !important;
-        height: 38px !important;
+        width: 39px !important;
+        height: 39px !important;
 
         object-fit: contain;
     }
 
-    .experience-heading {
-        flex-direction: column;
-
-        gap: 4px;
+    .experience-role {
+        font-size: 1.03rem;
     }
 
-    .experience-heading > span {
-        white-space: normal;
-    }
-
-    .recognition-card {
-        border-right: none;
-
-        border-bottom: 1px solid var(--border);
-    }
-
-    .recognition-card:last-child {
-        border-bottom: none;
+    .experience-company {
+        font-size: 0.67rem;
     }
 
     .footer {
