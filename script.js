@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ================= MOBILE MENU ================= */
+    /* MOBILE MENU */
 
     const menuToggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector(".nav-links");
@@ -11,19 +11,15 @@ document.addEventListener("DOMContentLoaded", function () {
             navLinks.classList.toggle("open");
         });
 
-        const links = navLinks.querySelectorAll("a");
-
-        links.forEach(function (link) {
-
+        navLinks.querySelectorAll("a").forEach(function (link) {
             link.addEventListener("click", function () {
                 navLinks.classList.remove("open");
             });
-
         });
     }
 
 
-    /* ================= ACTIVE NAVIGATION ================= */
+    /* ACTIVE NAVIGATION */
 
     const sections = document.querySelectorAll("section[id]");
     const navItems = document.querySelectorAll(".nav-links a");
@@ -34,9 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         sections.forEach(function (section) {
 
-            const sectionTop = section.offsetTop - 160;
-
-            if (window.scrollY >= sectionTop) {
+            if (window.scrollY >= section.offsetTop - 160) {
                 currentSection = section.getAttribute("id");
             }
 
@@ -46,9 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             link.classList.remove("active");
 
-            const href = link.getAttribute("href");
-
-            if (href === "#" + currentSection) {
+            if (link.getAttribute("href") === "#" + currentSection) {
                 link.classList.add("active");
             }
 
@@ -56,19 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", updateActiveNav);
-
     updateActiveNav();
 
 
-    /* ================= SCROLL REVEAL ================= */
+    /* SCROLL REVEAL */
 
     const revealElements = document.querySelectorAll(
-        ".research-card, " +
-        ".publication, " +
-        ".experience-card, " +
-        ".education-card, " +
-        ".skill-group, " +
-        ".recognition-card"
+        ".research-card, .publication, .experience-card, " +
+        ".education-card, .skill-group, .recognition-card"
     );
 
     revealElements.forEach(function (element) {
@@ -84,20 +71,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 entries.forEach(function (entry) {
 
                     if (entry.isIntersecting) {
-
                         entry.target.classList.add("visible");
-
                         observer.unobserve(entry.target);
                     }
 
                 });
 
             },
-            {
-                threshold: 0.12
-            }
+            { threshold: 0.12 }
         );
-
 
         revealElements.forEach(function (element) {
             observer.observe(element);
@@ -112,14 +94,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ================= RESIZE ================= */
+    /* RESIZE */
 
     window.addEventListener("resize", function () {
 
-        if (
-            window.innerWidth > 700 &&
-            navLinks
-        ) {
+        if (window.innerWidth > 700 && navLinks) {
             navLinks.classList.remove("open");
         }
 
