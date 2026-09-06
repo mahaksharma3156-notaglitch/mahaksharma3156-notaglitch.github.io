@@ -1,129 +1,952 @@
-document.addEventListener("DOMContentLoaded", () => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* ================= MOBILE MENU ================= */
+    <title>Mahak Sharma | AI & Machine Learning Researcher</title>
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    <meta
+        name="description"
+        content="Academic research portfolio of Mahak Sharma, focusing on Artificial Intelligence, Machine Learning, Computer Vision, Human-AI Collaboration, and AI-Driven Cybersecurity."
+    >
 
-    if (menuToggle && navLinks) {
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("open");
-        });
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap"
+        rel="stylesheet"
+    >
 
-        navLinks.querySelectorAll("a").forEach(link => {
+    <link rel="stylesheet" href="style.css">
+</head>
 
-            link.addEventListener("click", () => {
-                navLinks.classList.remove("open");
-            });
+<body>
 
-        });
-    }
+<header class="navbar">
+    <div class="nav-container">
 
+        <a href="#home" class="logo">
+            <span>M</span>S
+        </a>
 
-    /* ================= ACTIVE NAVIGATION ================= */
+        <button class="menu-toggle" aria-label="Open navigation">
+            ☰
+        </button>
 
-    const sections = document.querySelectorAll("section[id]");
-    const navItems = document.querySelectorAll(".nav-links a");
+        <nav class="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#research">Research</a>
+            <a href="#publications">Publications</a>
+            <a href="#experience">Experience</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
 
-    function updateActiveNav() {
-
-        let currentSection = "";
-
-        sections.forEach(section => {
-
-            const sectionTop =
-                section.offsetTop - 140;
-
-            if (window.scrollY >= sectionTop) {
-                currentSection =
-                    section.getAttribute("id");
-            }
-
-        });
-
-        navItems.forEach(link => {
-
-            link.classList.remove("active");
-
-            if (
-                link.getAttribute("href") ===
-                `#${currentSection}`
-            ) {
-                link.classList.add("active");
-            }
-
-        });
-
-    }
-
-    window.addEventListener(
-        "scroll",
-        updateActiveNav
-    );
-
-    updateActiveNav();
+    </div>
+</header>
 
 
-    /* ================= SCROLL REVEAL ================= */
+<main>
 
-    const revealElements =
-        document.querySelectorAll(
-            ".research-card, " +
-            ".publication, " +
-            ".experience-card, " +
-            ".education-card, " +
-            ".skill-group, " +
-            ".recognition-card"
-        );
+<!-- ================= HERO ================= -->
 
-    revealElements.forEach(element => {
-        element.classList.add("reveal");
-    });
+<section id="home" class="hero section">
+
+    <div class="hero-container">
+
+        <div class="hero-content">
+
+            <p class="eyebrow">AI & MACHINE LEARNING RESEARCH</p>
+
+            <h1>
+                Mahak<br>
+                <span>Sharma</span>
+            </h1>
+
+            <p class="hero-description">
+                Exploring intelligent systems at the intersection of
+                artificial intelligence, human-AI collaboration, and
+                trustworthy computing.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#research" class="btn btn-primary">
+                    Explore Research
+                </a>
+
+                <a
+                    href="Mahak_Sharma_CV.pdf"
+                    class="btn btn-secondary"
+                    download
+                >
+                    Download CV
+                </a>
+
+            </div>
+
+            <div class="hero-meta">
+
+                <div>
+                    <strong>Research</strong>
+                    <span>AI · ML · Security</span>
+                </div>
+
+                <div>
+                    <strong>Location</strong>
+                    <span>Palo Alto, CA</span>
+                </div>
+
+                <div>
+                    <strong>Focus</strong>
+                    <span>Intelligent Systems</span>
+                </div>
+
+            </div>
+
+        </div>
 
 
-    const observer =
-        new IntersectionObserver(
-            entries => {
+        <div class="hero-visual">
 
-                entries.forEach(entry => {
+            <div class="portrait-frame">
+                <img src="profile.jpg" alt="Mahak Sharma">
+            </div>
 
-                    if (entry.isIntersecting) {
+            <div class="visual-label">
+                <span>01</span>
+                Research Portfolio
+            </div>
 
-                        entry.target.classList.add(
-                            "visible"
-                        );
+        </div>
 
-                        observer.unobserve(
-                            entry.target
-                        );
-                    }
+    </div>
 
-                });
-
-            },
-            {
-                threshold: 0.12
-            }
-        );
+</section>
 
 
-    revealElements.forEach(element => {
-        observer.observe(element);
-    });
+<!-- ================= RESEARCH ================= -->
+
+<section id="research" class="section research-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">RESEARCH</p>
+
+            <h2>
+                Questions that<br>
+                guide my work.
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            My research interests center on developing machine learning
+            systems that are reliable, adaptive, and meaningful in
+            real-world settings.
+        </p>
+
+    </div>
 
 
-    /* ================= RESIZE ================= */
+    <div class="research-grid">
 
-    window.addEventListener("resize", () => {
+        <article class="research-card">
+            <div class="card-number">01</div>
 
-        if (
-            window.innerWidth > 700 &&
-            navLinks
-        ) {
-            navLinks.classList.remove("open");
-        }
+            <h3>
+                Artificial Intelligence & Machine Learning
+            </h3>
 
-    });
+            <p>
+                Deep learning, computer vision, continual learning,
+                and intelligent systems for complex data-driven problems.
+            </p>
 
-});
+            <div class="card-tags">
+                <span>Deep Learning</span>
+                <span>Continual Learning</span>
+                <span>Computer Vision</span>
+            </div>
+        </article>
+
+
+        <article class="research-card">
+            <div class="card-number">02</div>
+
+            <h3>
+                Human-AI Collaboration
+            </h3>
+
+            <p>
+                Studying how people interact with intelligent systems
+                and how multimodal signals can support more trustworthy
+                human-AI decision making.
+            </p>
+
+            <div class="card-tags">
+                <span>Multimodal AI</span>
+                <span>Trust</span>
+                <span>Human-AI Systems</span>
+            </div>
+        </article>
+
+
+        <article class="research-card">
+            <div class="card-number">03</div>
+
+            <h3>
+                AI-Driven Cybersecurity
+            </h3>
+
+            <p>
+                Exploring machine learning and AI governance approaches
+                for cybersecurity risk, access control, and adaptive
+                security environments.
+            </p>
+
+            <div class="card-tags">
+                <span>AI Security</span>
+                <span>Risk Management</span>
+                <span>Access Control</span>
+            </div>
+        </article>
+
+
+        <article class="research-card">
+            <div class="card-number">04</div>
+
+            <h3>
+                Data & Intelligent Systems
+            </h3>
+
+            <p>
+                Designing scalable data and machine learning pipelines
+                for recommendation, ranking, analytics, and
+                real-world deployment.
+            </p>
+
+            <div class="card-tags">
+                <span>Ranking</span>
+                <span>NLP</span>
+                <span>ML Engineering</span>
+            </div>
+        </article>
+
+    </div>
+
+
+    <div class="research-focus">
+
+        <div class="focus-label">
+            RESEARCH INTERESTS
+        </div>
+
+        <p>
+            Artificial Intelligence & Machine Learning
+            (Computer Vision, Deep Learning, Continual Learning)
+            <span>|</span>
+            Human-AI Collaboration
+            <span>|</span>
+            AI-Driven Cybersecurity
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= APPROACH ================= -->
+
+<section class="section approach-section">
+
+    <div class="approach-layout">
+
+        <div>
+            <p class="eyebrow">APPROACH</p>
+
+            <h2>
+                Rigorous methods,<br>
+                practical questions.
+            </h2>
+        </div>
+
+
+        <div class="approach-content">
+
+            <p>
+                I approach research through experimental design,
+                systematic analysis, and reproducible implementation.
+                My work emphasizes understanding not only whether a
+                model performs, but also why it performs and where
+                it may fail.
+            </p>
+
+            <div class="method-grid">
+                <span>Experimental Design</span>
+                <span>Ablation Studies</span>
+                <span>Model Evaluation</span>
+                <span>Feature Analysis</span>
+                <span>Error Analysis</span>
+                <span>Benchmarking</span>
+                <span>Reproducible Research</span>
+                <span>Framework Development</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PUBLICATIONS ================= -->
+
+<section id="publications" class="section publications-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">PUBLICATIONS</p>
+
+            <h2>
+                Selected research.
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            Current work spans trustworthy human-AI interaction,
+            cybersecurity governance, and adaptive learning systems.
+        </p>
+
+    </div>
+
+
+    <div class="publication-list">
+
+        <article class="publication">
+
+            <div class="publication-year">2026</div>
+
+            <div class="publication-main">
+
+                <span class="publication-status">
+                    ACCEPTED · AI & SOCIETY
+                </span>
+
+                <h3>
+                    Detecting Trust Miscalibration in Human-AI
+                    Collaboration Using Multimodal Emotion Cues:
+                    A Machine Learning Framework
+                </h3>
+
+                <p>Sharma, M.</p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication">
+
+            <div class="publication-year">2026</div>
+
+            <div class="publication-main">
+
+                <span class="publication-status">
+                    ACCEPTED · COMPUTERS & SECURITY
+                </span>
+
+                <h3>
+                    An AI-Augmented Governance Architecture for
+                    Dynamic Cybersecurity Risk Management in SMEs:
+                    Design, Implementation, and Longitudinal Assessment
+                </h3>
+
+                <p>Sharma, M.</p>
+
+            </div>
+
+        </article>
+
+
+        <article class="publication">
+
+            <div class="publication-year">2026</div>
+
+            <div class="publication-main">
+
+                <span class="publication-status">
+                    MANUSCRIPT IN PREPARATION
+                </span>
+
+                <h3>
+                    Replayless Structural Consolidation:
+                    Continual Learning via Dynamic Network Motifs
+                </h3>
+
+                <p>Sharma, M.</p>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section id="experience" class="section experience-section">
+
+    <div class="experience-intro">
+
+        <div>
+            <p class="eyebrow">EXPERIENCE</p>
+
+            <h2>
+                Research &<br>
+                industry.
+            </h2>
+        </div>
+
+        <p>
+            Selected research and professional experience across
+            machine learning, data, cybersecurity, and technology.
+        </p>
+
+    </div>
+
+
+    <div class="experience-grid">
+
+
+        <!-- AMAZON -->
+
+        <article class="experience-card">
+
+            <div class="experience-logo">
+                <img src="amazon.png" alt="Amazon logo">
+            </div>
+
+            <div class="experience-info">
+
+                <div class="experience-role">
+                    Machine Learning Engineer
+                </div>
+
+                <div class="experience-company">
+                    Amazon · via Forman Tech
+                </div>
+
+                <div class="experience-date">
+                    Jul 2025 — Present
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- COMMUNITY DREAMS -->
+
+        <article class="experience-card">
+
+            <div class="experience-logo">
+                <img
+                    src="community-dreams.png"
+                    alt="Community Dreams Foundation logo"
+                >
+            </div>
+
+            <div class="experience-info">
+
+                <div class="experience-role">
+                    Program Manager
+                </div>
+
+                <div class="experience-company">
+                    Community Dreams Foundation
+                </div>
+
+                <div class="experience-date">
+                    Oct 2024 — Jul 2025
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- TCS -->
+
+        <article class="experience-card">
+
+            <div class="experience-logo">
+                <img
+                    src="tcs.png"
+                    class="tcs-logo"
+                    alt="Tata Consultancy Services logo"
+                >
+            </div>
+
+            <div class="experience-info">
+
+                <div class="experience-role">
+                    Systems Engineer
+                </div>
+
+                <div class="experience-company">
+                    Tata Consultancy Services
+                </div>
+
+                <div class="experience-date">
+                    Jul 2022 — Jun 2023
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- DELOITTE -->
+
+        <article class="experience-card">
+
+            <div class="experience-logo">
+                <img
+                    src="deloitte.png"
+                    alt="Deloitte logo"
+                >
+            </div>
+
+            <div class="experience-info">
+
+                <div class="experience-role">
+                    Senior Analyst
+                </div>
+
+                <div class="experience-company">
+                    Deloitte USI
+                </div>
+
+                <div class="experience-date">
+                    Mar 2020 — Jun 2022
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- RESEARCH -->
+
+        <article class="experience-card research-experience">
+
+            <div class="research-badge">
+                R
+            </div>
+
+            <div class="experience-info">
+
+                <div class="experience-role">
+                    Research Assistant
+                </div>
+
+                <div class="experience-company">
+                    Computer Vision & Deep Learning · Medi-Caps University
+                </div>
+
+                <div class="experience-date">
+                    Jul 2021 — Apr 2022
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="experience-card research-experience">
+
+            <div class="research-badge">
+                R
+            </div>
+
+            <div class="experience-info">
+
+                <div class="experience-role">
+                    Research Assistant
+                </div>
+
+                <div class="experience-company">
+                    Cybersecurity & Cloud Access Control · Medi-Caps University
+                </div>
+
+                <div class="experience-date">
+                    Jul 2020 — Jun 2021
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about" class="section about-section">
+
+    <div class="about-grid">
+
+        <div>
+
+            <p class="eyebrow">ABOUT</p>
+
+            <h2>
+                Building systems<br>
+                worth trusting.
+            </h2>
+
+        </div>
+
+
+        <div class="about-text">
+
+            <p class="large-text">
+                My work sits at the intersection of machine learning,
+                intelligent systems, and responsible technology.
+            </p>
+
+            <p>
+                I am interested in understanding how AI systems can
+                become more adaptive, interpretable, and reliable when
+                deployed in complex environments involving people,
+                data, and changing conditions.
+            </p>
+
+            <p>
+                My academic background spans computer applications,
+                information systems, and applied machine learning,
+                complemented by research and industry experience.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section class="section education-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">EDUCATION</p>
+
+            <h2>
+                Academic foundation.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="education-grid">
+
+        <article class="education-card">
+
+            <span class="education-year">
+                2023 — 2024
+            </span>
+
+            <h3>
+                MS in Management Information Systems
+            </h3>
+
+            <p class="institution">
+                University at Buffalo, SUNY · USA
+            </p>
+
+            <p>
+                IT & Cloud Infrastructure Management · Distributed
+                Computing & Big Data · Database Management Systems ·
+                Predictive Analytics · Data Warehousing
+            </p>
+
+        </article>
+
+
+        <article class="education-card">
+
+            <span class="education-year">
+                2019 — 2022
+            </span>
+
+            <h3>
+                Master of Computer Applications
+            </h3>
+
+            <p class="institution">
+                Medi-Caps University · India
+            </p>
+
+            <p>
+                Advanced Programming · Data Structures & Algorithms ·
+                IoT · Data Warehousing & Mining · Computer Networks ·
+                Statistical & Numerical Methods
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section class="section skills-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">SKILLS</p>
+
+            <h2>
+                Areas of practice.
+            </h2>
+        </div>
+
+    </div>
+
+
+    <div class="skills-grid">
+
+        <div class="skill-group">
+            <h3>AI & Machine Learning</h3>
+            <p>
+                Deep Learning · Neural Networks · Continual Learning ·
+                Recommender Systems · Ranking · Anomaly Detection
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Computer Vision</h3>
+            <p>
+                Multimodal AI · Facial Expression Recognition ·
+                Video Analysis · CNNs · CNN-BiLSTM · OpenFace
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Natural Language Processing</h3>
+            <p>
+                Query Classification · Semantic Search ·
+                Query Understanding · Text Classification · Ranking
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Cybersecurity & AI Security</h3>
+            <p>
+                Cloud Security · MFA · RBAC · ABAC ·
+                Cyber Risk Management · AI Governance
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>ML Engineering & MLOps</h3>
+            <p>
+                Python · SQL · PySpark · TensorFlow · Scikit-learn ·
+                AWS SageMaker · Model Monitoring · Drift Detection
+            </p>
+        </div>
+
+        <div class="skill-group">
+            <h3>Research Methods</h3>
+            <p>
+                Experimental Design · Ablation Studies ·
+                Literature Review · Benchmarking · Error Analysis ·
+                Reproducible Research
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MILESTONES ================= -->
+
+<section class="section recognition-section">
+
+    <div class="section-header">
+
+        <div>
+            <p class="eyebrow">RECOGNITION</p>
+
+            <h2>
+                A few milestones.
+            </h2>
+        </div>
+
+        <p class="section-intro">
+            Academic, professional, and technical milestones
+            that have shaped my work.
+        </p>
+
+    </div>
+
+
+    <div class="recognition-grid">
+
+        <div class="recognition-card">
+
+            <span>01</span>
+
+            <h3>
+                Best Research Presentation Award
+            </h3>
+
+            <p>
+                Oral Category · Medi-Caps University
+            </p>
+
+        </div>
+
+
+        <div class="recognition-card">
+
+            <span>02</span>
+
+            <h3>
+                TCS GEMS Award
+            </h3>
+
+            <p>
+                Employee Recognition · Tata Consultancy Services
+            </p>
+
+        </div>
+
+
+        <div class="recognition-card">
+
+            <span>03</span>
+
+            <h3>
+                AWS Certified Machine Learning
+            </h3>
+
+            <p>
+                AWS Certified Machine Learning – Specialty
+            </p>
+
+        </div>
+
+
+        <div class="recognition-card">
+
+            <span>04</span>
+
+            <h3>
+                CompTIA Security+
+            </h3>
+
+            <p>
+                Cybersecurity certification
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact" class="section contact-section">
+
+    <div class="contact-container">
+
+        <div>
+
+            <p class="eyebrow">CONTACT</p>
+
+            <h2>
+                Interested in<br>
+                research collaboration?
+            </h2>
+
+        </div>
+
+
+        <div class="contact-content">
+
+            <p>
+                I welcome conversations about research,
+                doctoral opportunities, collaboration, and
+                intelligent systems.
+            </p>
+
+            <a
+                href="mailto:mahaksharma.academic@gmail.com"
+                class="contact-email"
+            >
+                mahaksharma.academic@gmail.com
+            </a>
+
+            <div class="contact-links">
+
+                <a
+                    href="https://www.linkedin.com/in/8mahakms/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    LinkedIn ↗
+                </a>
+
+                <a
+                    href="Mahak_Sharma_CV.pdf"
+                    download
+                >
+                    Curriculum Vitae ↓
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer class="footer">
+
+    <div>
+        <strong>Mahak Sharma</strong>
+        <span>AI & Machine Learning Research</span>
+    </div>
+
+    <p>© 2026 Mahak Sharma</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
