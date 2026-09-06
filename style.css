@@ -164,7 +164,6 @@ a {
 
     font-family: var(--serif);
 
-    /* SMALLER */
     font-size: clamp(3.4rem, 6vw, 5.5rem);
 
     font-weight: 400;
@@ -180,7 +179,7 @@ a {
 }
 
 
-/* LOCATION BELOW NAME */
+/* LOCATION — DIRECTLY BELOW NAME */
 
 .location-line {
     margin-top: 16px;
@@ -317,7 +316,7 @@ a {
 }
 
 
-/* ALL MAIN HEADINGS */
+/* MAIN HEADINGS */
 
 .research-heading h2,
 .publication-heading h2,
@@ -328,7 +327,6 @@ a {
 
     font-family: var(--serif);
 
-    /* SMALLER ACROSS THE SITE */
     font-size: clamp(1.8rem, 3vw, 2.65rem);
 
     font-weight: 400;
@@ -924,9 +922,6 @@ a {
     gap: 100px;
     align-items: end;
 }
-
-
-/* CONTACT HEADING ALSO SMALLER */
 
 .contact-grid h2 {
     margin-top: 16px;
